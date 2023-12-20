@@ -1,0 +1,241 @@
+[
+    {
+        "key": "group_6580838ebad96",
+        "title": "GSquared Custom Donations",
+        "fields": [
+            {
+                "key": "field_6582baf9516a7",
+                "label": "Donation Goal",
+                "name": "donation_goal",
+                "aria-label": "",
+                "type": "number",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": 4000000,
+                "min": "",
+                "max": "",
+                "placeholder": "",
+                "step": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_6582540d0e867",
+                "label": "Donation Heading",
+                "name": "donation_heading",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Lorem ipsum",
+                "maxlength": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_6580889e7a473",
+                "label": "Donation Amount",
+                "name": "donation_amount",
+                "aria-label": "",
+                "type": "number",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": "acf-donation-amount"
+                },
+                "default_value": 10000,
+                "min": 1,
+                "max": "",
+                "placeholder": "",
+                "step": 100,
+                "prepend": "$",
+                "append": ""
+            },
+            {
+                "key": "field_65825456decfb",
+                "label": "Donation Description",
+                "name": "donation_description",
+                "aria-label": "",
+                "type": "textarea",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita",
+                "maxlength": "",
+                "rows": "",
+                "placeholder": "",
+                "new_lines": "wpautop"
+            },
+            {
+                "key": "field_658089917a474",
+                "label": "Select Payment Method",
+                "name": "select_payment_method",
+                "aria-label": "",
+                "type": "radio",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "paypal": "Paypal",
+                    "offline": "Offline Donation"
+                },
+                "default_value": "paypal",
+                "return_format": "array",
+                "allow_null": 0,
+                "other_choice": 0,
+                "layout": "horizontal",
+                "save_other_choice": 0
+            },
+            {
+                "key": "field_658089d97a475",
+                "label": "Personal Info",
+                "name": "personal_info",
+                "aria-label": "",
+                "type": "group",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": "personal-info-group"
+                },
+                "layout": "block",
+                "sub_fields": [
+                    {
+                        "key": "field_65808a147a476",
+                        "label": "First Name",
+                        "name": "first_name",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "First Name*",
+                        "prepend": "",
+                        "append": ""
+                    },
+                    {
+                        "key": "field_65808a3e7a477",
+                        "label": "Last Name",
+                        "name": "last_name",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "Last Name*",
+                        "prepend": "",
+                        "append": ""
+                    },
+                    {
+                        "key": "field_65808a5c7a478",
+                        "label": "Email",
+                        "name": "email",
+                        "aria-label": "",
+                        "type": "email",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "Email*",
+                        "prepend": "",
+                        "append": ""
+                    },
+                    {
+                        "key": "field_65808a6e7a479",
+                        "label": "Phone",
+                        "name": "phone",
+                        "aria-label": "",
+                        "type": "number",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "min": "",
+                        "max": "",
+                        "placeholder": "Phone*",
+                        "step": "",
+                        "prepend": "",
+                        "append": ""
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/donations"
+                }
+            ],
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "donation"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0
+    }
+]
