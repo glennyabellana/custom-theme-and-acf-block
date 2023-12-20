@@ -1,0 +1,31 @@
+{
+    "name": "acf/donations",
+    "title": "GSquared Donations",
+    "description": "A custom donations block.",
+    "category": "widgets",
+    "icon": "money-alt",
+    "keywords": [
+        "donations",
+        "payment"
+    ],
+    "acf": {
+        "renderTemplate": "render.php"
+    },
+    "style": [
+        "gs-donations"
+    ],
+    "script": [
+        "wp-block-acf-donations"
+    ],
+    "supports": {
+        "align": [
+            "wide",
+            "full"
+        ],
+        "color": {
+            "text": true,
+            "background": true,
+            "link": false
+        }
+    }
+}
