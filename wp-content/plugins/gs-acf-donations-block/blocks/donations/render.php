@@ -48,7 +48,7 @@ $block_wrapper_attr   = ( ! $is_preview ) ? get_block_wrapper_attributes() : '';
 						'post_status' => 'publish',
 					),
 					'submit_value'       => 'Donate Now',
-					'fields'             => array( 'donation_amount_base', 'select_payment_method', 'personal_info' ), // List all fields except the one you want to exclude.
+					'fields'             => array( 'donation_amount', 'select_payment_method', 'personal_info' ), // List all fields except the one you want to exclude.
 					'html_before_fields' => '<input type="hidden" name="_post_title" value="donation">',
 				)
 			);
