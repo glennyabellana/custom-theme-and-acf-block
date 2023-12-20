@@ -75,11 +75,22 @@ function gs_import_acf_field_group() {
 }
 register_activation_hook( __FILE__, 'gs_import_acf_field_group' );
 
+/**
+ * Calculates the total amount of donations from all 'donation' posts.
+ *
+ * This function queries all published posts of the 'donation' custom post type
+ * and sums up the values of the 'donation_amount' custom field, which is assumed
+ * to be associated with each 'donation' post. The function uses a WP_Query to
+ * retrieve the posts and then iterates over each post to accumulate the total
+ * donation amount.
+ *
+ * @return float The total amount of donations from all 'donation' posts.
+ */
 function get_total_donations() {
 	$args = array(
-		'post_type'      => 'donation', // Replace with your custom post type
+		'post_type'      => 'donation', // Replace with your custom post type.
 		'post_status'    => 'publish',
-		'posts_per_page' => -1, // Retrieve all posts
+		'posts_per_page' => -1, // Retrieve all posts.
 	);
 
 	$the_query      = new WP_Query( $args );
@@ -88,7 +99,7 @@ function get_total_donations() {
 	if ( $the_query->have_posts() ) {
 		while ( $the_query->have_posts() ) {
 			$the_query->the_post();
-			$donation_amount = get_field( 'donation_amount', get_the_ID() ); // Replace with your ACF field name
+			$donation_amount = get_field( 'donation_amount', get_the_ID() ); // Replace with your ACF field name.
 			$total_donation += (float) $donation_amount;
 		}
 		wp_reset_postdata();
@@ -97,6 +108,21 @@ function get_total_donations() {
 	return $total_donation;
 }
 
+/**
+ * Formats a numerical value into a human-readable string representation.
+ *
+ * This function takes a numerical value and converts it into a string
+ * representing the number in words with appropriate units such as 'thousand',
+ * 'million', or 'billion'. The function is capable of handling numbers up to
+ * billions. For numbers less than 1000, it returns the number as is.
+ *
+ * The conversion is rounded to two decimal places for readability and ease of
+ * understanding. For example, 1500 becomes '1.5 thousand', and 2500000 becomes
+ * '2.5 million'.
+ *
+ * @param float|int $number The numerical value to be converted into words.
+ * @return string|float|int The number in words if it's 1000 or greater, or the original number if less.
+ */
 function format_number_to_words( $number ) {
 	if ( $number >= 1000000000 ) {
 		return round( $number / 1000000000, 2 ) . ' billion';
@@ -108,26 +134,32 @@ function format_number_to_words( $number ) {
 	return $number;
 }
 
+/**
+ * Updates the post title of a donation post type on save.
+ *
+ * This function is hooked into the 'acf/save_post' action and is triggered after a post is saved.
+ * It specifically targets posts of the 'donation' custom post type. The function updates the post's title
+ * to 'Donation ' followed by the post's ID and also updates the post's slug accordingly.
+ *
+ * @param int $post_id The ID of the post being saved.
+ */
 function update_donation_post_title( $post_id ) {
-	// Check if it's the correct post type and a new post
-	if ( get_post_type( $post_id ) != 'donation' || $post_id == 'new_post' ) {
+	// Check if it's the correct post type and a new post.
+	if ( 'donation' !== get_post_type( $post_id ) || 'new_post' === $post_id ) {
 		return;
 	}
 
-	// Update the title
+	// Update the title.
 	$new_title = 'Donation ' . $post_id;
 	wp_update_post(
 		array(
 			'ID'         => $post_id,
 			'post_title' => $new_title,
-			'post_name'  => sanitize_title( $new_title ), // Update the slug as well
+			'post_name'  => sanitize_title( $new_title ), // Update the slug as well.
 		)
 	);
 }
-
-add_action( 'acf/save_post', 'update_donation_post_title', 20 ); // Priority 20 to ensure it runs after ACF saves the post data
-
-
+add_action( 'acf/save_post', 'update_donation_post_title', 20 ); // Priority 20 to ensure it runs after ACF saves the post data.
 
 /**
  * Custom post type "Donations"

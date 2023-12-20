@@ -13,14 +13,13 @@
  * @package GS_Acf_Donations_Block
  */
 
-// global $post;
-$donation_heading = get_field( 'donation_heading' );
-$donation_goal = get_field( 'donation_goal' );
+$donation_heading     = get_field( 'donation_heading' );
+$donation_goal        = get_field( 'donation_goal' );
 $donation_description = get_field( 'donation_description' );
-$donation_amount = get_field( 'donation_amount' );
-$block_wrapper_attr = ( ! $is_preview ) ? get_block_wrapper_attributes() : '';
+$donation_amount      = get_field( 'donation_amount' );
+$block_wrapper_attr   = ( ! $is_preview ) ? get_block_wrapper_attributes() : '';
 ?>
-<section <?php echo $block_wrapper_attr; ?>>
+<section <?php echo wp_kses_post( $block_wrapper_attr ); ?>>
 
 		<h2><?php echo esc_html( $donation_heading ); ?></h2>
 		<div class="donation-description" id="donation-description-sr"><?php echo wp_kses_post( $donation_description ); ?></div>
@@ -49,12 +48,10 @@ $block_wrapper_attr = ( ! $is_preview ) ? get_block_wrapper_attributes() : '';
 						'post_status' => 'publish',
 					),
 					'submit_value'       => 'Donate Now',
-					'fields'             => array( 'donation_amount', 'select_payment_method', 'personal_info' ), // List all fields except the one you want to exclude
+					'fields'             => array( 'donation_amount_base', 'select_payment_method', 'personal_info' ), // List all fields except the one you want to exclude.
 					'html_before_fields' => '<input type="hidden" name="_post_title" value="donation">',
 				)
 			);
 		}
 		?>
 </section>
-
-
