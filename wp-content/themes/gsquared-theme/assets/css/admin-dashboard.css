@@ -1,0 +1,9 @@
+.wp-block-post-content {
+    background-image: url('../images/swish-bg.png');
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: contain;
+    width: 100%;
+    height: 2000px;
+    padding-top: 3em;
+}

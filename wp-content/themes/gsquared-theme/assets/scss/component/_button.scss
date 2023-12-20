@@ -1,0 +1,22 @@
+.guten-element {
+
+    .guten-button {
+        font-family: "source-sans-3", sans-serif;
+        font-size: 16px;
+        line-height: normal;
+        background-color: #3C3E40;
+        border-radius: 5px;
+        text-transform: uppercase;
+        border: 1px solid transparent !important;
+
+        &:hover {
+            background-color: transparent;
+            border: 1px solid #3C3E40 !important;
+        }
+
+        &.guten-button-md {
+            padding: 19px 30px;
+        }
+    }
+
+}

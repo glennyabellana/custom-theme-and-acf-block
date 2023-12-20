@@ -1,0 +1,275 @@
+/*
+Theme Name: G Squared
+Theme URI: http://underscores.me/
+Author: Glenny Abellana
+Author URI: http://underscores.me/
+Description: Custom theme: G Squared, developed by Glenny Abellana
+Version: 1.0.0
+Text Domain: gsquared-theme
+
+===============================================   
+STYLESHEET INDEXING
+|
+|___ Default Styles
+|	|___ Variables
+|	|___ Common
+|	|___ Reset Styels
+|	|___ Typography
+|	|___ 
+|	|___ 
+|	|___ 
+|
+|___ Elements Styles
+|	|___ Section Title
+|	|___ Button
+|	|___ Breadcrumb
+|	|___ 
+|	|___ 
+|
+|___Blocks Styles
+|	|___ Hero Styles
+|	|___ 
+|
+|___Template Styles
+|	|___ 
+|	|___ 
+|	|___ 
+|	|___ 
+|	|___ 
+|	|___
+
+|
+|___Blocks Styles
+|	|___ Header Styles
+|	|___ Footer Styles
+|
+|___
+|
+|___ 
+|
+|___ END STYLESHEET INDEXING
+
+--------------------------------------------*/
+/*=======================================================================
+1. Default Styles
+=========================================================================*/
+/*=======================================================================
+2. Component Styles
+=========================================================================*/
+@import url("https://use.typekit.net/vdj3orw.css");
+.font-lora__normal, .entry-header .entry-title {
+  font-family: "lora", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-lora__bold, h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "lora", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.font-montserrat__light, body,
+p {
+  font-family: "montserrat", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.font-montserrat__normal {
+  font-family: "montserrat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-montserrat__bold {
+  font-family: "montserrat", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+body,
+p {
+  color: #333;
+  font-size: 16px;
+}
+
+.grid-container, .site-footer, .widget-area, .site-main {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.site-header {
+  padding-left: 2em;
+  padding-right: 2em;
+}
+.site-header a {
+  color: #fff;
+}
+
+.site-main {
+  padding-left: 2em;
+  padding-right: 2em;
+  width: 100%;
+}
+
+.main-navigation li {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+@media (min-width: 768px) {
+  .main-navigation li {
+    padding-right: 2em;
+    padding-left: 0;
+  }
+}
+
+.entry-header {
+  min-height: 12em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  margin-bottom: 8em;
+}
+body.home-page .site-branding,
+body.home-page #site-navigation {
+  display: none;
+}
+body.home-page #masthead {
+  padding-top: 4em;
+}
+body.home-page #masthead .hero-header-bg {
+  background-position: 50% 0%;
+}
+body.home-page .site-main {
+  max-width: 1400px;
+}
+body.home-page h2.wp-block-heading {
+  font-weight: 400;
+  font-size: 2.8125em;
+}
+
+.widget-area {
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.site-footer {
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+body.home-page .site-footer {
+  padding-top: 7em;
+}
+body.home-page .site-info {
+  display: none;
+}
+
+/*=======================================================================
+3. Block Styles
+=========================================================================*/
+.hero-header-bg {
+  background-image: url("../images/swish-bg.png");
+  background-repeat: no-repeat;
+  background-position: 50% -50%;
+  background-size: cover;
+  width: 100%;
+  height: 2000px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+@media (min-width: 980px) {
+  .hero-header-bg {
+    background-size: contain;
+  }
+}
+
+.home-media-text.wp-block-media-text.is-image-fill .wp-block-media-text__media {
+  min-height: 44em;
+  border-radius: 20px;
+  box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.2);
+}
+.home-media-text .wp-block-heading {
+  font-size: 1.25em;
+  line-height: 1.4;
+  margin-bottom: 1.5em;
+  position: relative;
+}
+.home-media-text .wp-block-heading:before {
+  content: "";
+  position: absolute;
+  left: -2.6em;
+  top: -2em;
+  z-index: -1;
+  width: 3.5em;
+  height: 3.5em;
+  background-image: url("../images/icon-square-dots.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.home-media-text .wp-block-heading:after {
+  content: "";
+  position: absolute;
+  right: -2.3em;
+  top: -3em;
+  z-index: -1;
+  width: 2em;
+  height: 3em;
+  background-image: url("../images/symbol-L.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0 100%;
+  rotate: 180deg;
+}
+.home-media-text .wp-block-media-text__content {
+  position: relative;
+}
+.home-media-text .wp-block-media-text__content:before {
+  content: "";
+  position: absolute;
+  left: 4em;
+  bottom: -3.5em;
+  z-index: -1;
+  width: 2em;
+  height: 3em;
+  background-image: url("../images/symbol-L.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 0 100%;
+}
+.home-media-text .wp-block-media-text__content {
+  padding-left: 15%;
+  padding-right: 15%;
+}
+.home-media-text .wp-block-media-text__content p {
+  font-size: 90%;
+}
+.home-media-text.wp-block-media-text .wp-block-media-text__content {
+  padding-top: 4em;
+}
+@media (min-width: 600px) {
+  .home-media-text.wp-block-media-text .wp-block-media-text__content {
+    padding-top: 0;
+  }
+}
+
+/*=======================================================================
+3. Template Styles
+=========================================================================*/
+/*=======================================================================
+4.Blog Styles 
+=========================================================================*/
+/*=======================================================================
+5.Template Style
+=========================================================================*/
+/*# sourceMappingURL=style.css.map */

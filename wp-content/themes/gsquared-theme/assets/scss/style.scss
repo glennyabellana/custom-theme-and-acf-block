@@ -1,0 +1,90 @@
+/*
+Theme Name: G Squared
+Theme URI: http://underscores.me/
+Author: Glenny Abellana
+Author URI: http://underscores.me/
+Description: Custom theme: G Squared, developed by Glenny Abellana
+Version: 1.0.0
+Text Domain: gsquared-theme
+
+===============================================   
+STYLESHEET INDEXING
+|
+|___ Default Styles
+|	|___ Variables
+|	|___ Common
+|	|___ Reset Styels
+|	|___ Typography
+|	|___ 
+|	|___ 
+|	|___ 
+|
+|___ Elements Styles
+|	|___ Section Title
+|	|___ Button
+|	|___ Breadcrumb
+|	|___ 
+|	|___ 
+|
+|___Blocks Styles
+|	|___ Hero Styles
+|	|___ 
+|
+|___Template Styles
+|	|___ 
+|	|___ 
+|	|___ 
+|	|___ 
+|	|___ 
+|	|___
+
+|
+|___Blocks Styles
+|	|___ Header Styles
+|	|___ Footer Styles
+|
+|___
+|
+|___ 
+|
+|___ END STYLESHEET INDEXING
+
+--------------------------------------------*/
+
+/*=======================================================================
+1. Default Styles
+=========================================================================*/
+
+
+/*=======================================================================
+2. Component Styles
+=========================================================================*/
+
+@import "component/typography";
+@import "component/header";
+// @import "component/button";
+@import "component/widgets";
+@import "component/footer";
+
+/*=======================================================================
+3. Block Styles
+=========================================================================*/
+
+@import "block/hero";
+@import "block/media-text";
+
+/*=======================================================================
+3. Template Styles
+=========================================================================*/
+
+
+/*=======================================================================
+4.Blog Styles 
+=========================================================================*/
+
+
+/*=======================================================================
+5.Template Style
+=========================================================================*/
+
+// @import 'template/page';

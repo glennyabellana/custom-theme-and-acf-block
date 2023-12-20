@@ -1,0 +1,55 @@
+// Import Adobe Fonts CSS
+@import url('https://use.typekit.net/vdj3orw.css');
+
+
+
+// Define the font family
+$font-lora: "lora", serif;
+$font-montserrat: "montserrat", sans-serif;
+
+// Apply the font family to a CSS class
+.font-lora__normal {
+    font-family: $font-lora;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.font-lora__bold {
+    font-family: $font-lora;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.font-montserrat__light {
+    font-family: $font-montserrat;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.font-montserrat__normal {
+    font-family: $font-montserrat;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.font-montserrat__bold {
+    font-family: $font-montserrat;
+    font-weight: 700;
+    font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @extend .font-lora__bold;
+}
+
+body,
+p {
+    @extend .font-montserrat__light;
+    color: #333;
+    font-size: 16px;
+}

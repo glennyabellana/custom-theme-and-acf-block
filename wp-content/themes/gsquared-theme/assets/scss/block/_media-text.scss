@@ -1,0 +1,82 @@
+.home-media-text {
+    &.wp-block-media-text.is-image-fill .wp-block-media-text__media {
+        min-height: 44em;
+        border-radius: 20px;
+
+        // background: url(<path-to-image>), lightgray -419.552px 0px / 200% 100% no-repeat;
+        box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.20);
+    }
+
+    .wp-block-heading {
+        font-size: 1.25em;
+        line-height: 1.4;
+        margin-bottom: 1.5em;
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: -2.6em;
+            top: -2em;
+            z-index: -1;
+            width: 3.5em;
+            height: 3.5em;
+            background-image: url('../images/icon-square-dots.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            right: -2.3em;
+            top: -3em;
+            z-index: -1;
+            width: 2em;
+            height: 3em;
+            background-image: url('../images/symbol-L.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: 0 100%;
+            rotate: 180deg;
+        }
+    }
+
+    .wp-block-media-text__content {
+        position: relative;
+
+        &:before {
+            content: '';
+            position: absolute;
+            left: 4em;
+            bottom: -3.5em;
+            z-index: -1;
+            width: 2em;
+            height: 3em;
+            background-image: url('../images/symbol-L.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: 0 100%;
+        }
+    }
+
+    .wp-block-media-text__content {
+        padding-left: 15%;
+        padding-right: 15%;
+
+        p {
+            font-size: 90%;
+        }
+    }
+
+    &.wp-block-media-text .wp-block-media-text__content {
+        padding-top: 4em;
+    }
+
+    @media(min-width: 600px) {
+        &.wp-block-media-text .wp-block-media-text__content {
+            padding-top: 0;
+        }
+    }
+
+}

@@ -1,0 +1,17 @@
+.site-footer {
+    @extend .grid-container;
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+body.home-page {
+
+    .site-footer {
+        padding-top: 7em;
+    }
+
+    .site-info {
+        display: none;
+    }
+
+}
