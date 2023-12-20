@@ -1,0 +1,118 @@
+#gitignore file used in Performance Foundry development
+
+#Core WP files that might change
+.htaccess
+/index.php
+/license.txt
+/readme.html
+/wp-activate.php
+/wp-admin
+/wp-blog-header.php
+/wp-comments-post.php
+/wp-config.php
+/wp-config-sample.php
+/wp-cron.php
+/wp-includes
+/wp-links-opml.php
+/wp-load.php
+/wp-login.php
+/wp-mail.php
+/wp-settings.php
+/wp-signup.php
+/wp-trackback.php
+/xmlrpc.php
+
+#Host-specific core files
+/wp-config-hosting.php
+/db-config.php
+/wp-content/db.php
+/wp-content/index.php
+
+#Uploads since we don't want every bit of media
+wp-content/uploads
+wp-content/blogs.dir
+wp-content/upgrade
+wp-content/gallery
+
+#Backup tools
+wp-content/backups/
+*backups*
+!**/wprp.backups.php
+!**/wprp.hm.backup.php
+
+#Dev tools
+wp-content/plugins/query-monitor/*
+wp-content/plugins/disable-email/*
+wp-content/plugins/genesis-visual-hook-guide/*
+wp-content/mu-plugins/WP_Logging.php
+wp-content/mu-plugins/be-media-from-production.php
+wp-content/plugins/block-unit-test
+
+#w3tc, other caches, note *cache* removes core wp files!
+**/w3tc
+*w3-total*
+wp-content/backup-db/
+wp-content/advanced-cache.php
+wp-content/wp-cache-config.php
+wp-content/object-cache.php
+wp-content/w3tc-config*
+wp-content/cache/
+.cache/
+cache.json
+wp-content/plugins/wp-rocket/cache.json
+wp-content/plugins/wp-to-twitter/.tweetcache
+wp-content/plugins/bwp-minify/cache/
+
+#Sass Cache
+**/sass/sass-cache
+**/sass/.sass-cache
+*.scssc
+
+#Node and Composer Files
+**/node_modules
+package-lock.json
+composer.lock
+
+#sitemaps
+sitemap.xml
+sitemap.xml.gz
+sitemap_index.xml
+
+#OSX files
+*.DS_Store
+
+#Misc
+ads.txt
+*.zip
+*.tar
+*.gz
+.ht_wsr.txt
+.synthquota
+nginx.conf
+*.sql
+wc-logs/
+*.log
+nbproject*
+.idea*
+*.sublime-*
+/temp
+/assets
+/google*
+/sucuri-*
+/pinterest-*
+wp-cli.phar
+
+#Project-specific ignores
+.yarn/*
+!.yarn/cache
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+phpunit.phar
+wp-content/plugins/advanced-custom-fields-pro/
+wp-content/plugins/akismet/
+wp-content/plugins/hello.php
+wp-content/plugins/index.php
+wp-content/themes/index.php
+wp-content/themes/gsquared-theme/vendor/
